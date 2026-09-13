@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Taylor Breton | Coastal Ecology & Restoration</title>
+
+    <meta name="description" content="Taylor Breton — PhD student studying seagrass ecology, restoration, and coastal ecosystems.">
+
+    <style>
+        /* =========================
+           GENERAL
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #f7f5ee;
+            color: #18352f;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1150px, 90%);
+            margin: 0 auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(247, 245, 238, 0.94);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #d9ddd3;
+        }
+
+        nav {
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            font-size: 20px;
+            font-weight: normal;
+            white-space: nowrap;
+        }
+
+        .logo-mark {
+            font-size: 27px;
+            color: #476b58;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.03em;
+        }
+
+        .nav-links a {
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #789477;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(15, 47, 42, 0.30),
+                    rgba(15, 47, 42, 0.52)
+                ),
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=85")
+                center center / cover no-repeat;
+
+            color: white;
+        }
+
+        .hero-content {
+            width: min(850px, 90%);
+            margin: 0 auto;
+
+            text-align: center;
+
+            padding-top: 72px;
+        }
+
+        .eyebrow {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+
+            opacity: 0.95;
+        }
+
+        .hero h1 {
+            font-size: clamp(55px, 8vw, 100px);
+            font-weight: normal;
+            line-height: 1;
+
+            margin-bottom: 18px;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(20px, 2.5vw, 28px);
+            margin-bottom: 10px;
+        }
+
+        .hero-location {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+
+            opacity: 0.9;
+        }
+
+        .hero-line {
+            width: 55px;
+            height: 1px;
+            background: white;
+
+            margin: 28px auto;
+        }
+
+        .hero-description {
+            max-width: 650px;
+            margin: 0 auto 35px;
+
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 13px 27px;
+
+            border: 1px solid white;
+            border-radius: 3px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.05em;
+
+            transition: all 0.25s ease;
+        }
+
+        .button:hover {
+            background: white;
+            color: #18352f;
+        }
+
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            padding: 110px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .section-label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #789477;
+
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            font-size: clamp(38px, 5vw, 58px);
+            font-weight: normal;
+            line-height: 1.05;
+
+            margin-bottom: 25px;
+        }
+
+        .intro p {
+            font-size: 17px;
+            color: #46564f;
+            margin-bottom: 18px;
+        }
+
+        .text-link {
+            display: inline-block;
+
+            margin-top: 10px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.05em;
+
+            border-bottom: 1px solid #789477;
+            padding-bottom: 4px;
+        }
+
+        .photo-placeholder {
+            min-height: 480px;
+
+            background:
+                linear-gradient(
+                    rgba(30, 70, 62, 0.15),
+                    rgba(30, 70, 62, 0.15)
+                ),
+                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=85")
+                center / cover;
+
+            position: relative;
+        }
+
+        .photo-caption {
+            position: absolute;
+            bottom: 18px;
+            right: 18px;
+
+            background: rgba(247,245,238,0.92);
+            padding: 10px 14px;
+
+            font-size: 13px;
+            font-style: italic;
+        }
+
+
+        /* =========================
+           RESEARCH
+        ========================= */
+
+        .research {
+            padding: 105px 0;
+
+            background: #e8ebe1;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 45px;
+        }
+
+        .section-heading p {
+            font-size: 17px;
+            color: #52635b;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .research-card {
+            background: #f7f5ee;
+            min-height: 330px;
+
+            padding: 24px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            position: relative;
+            overflow: hidden;
+
+            transition: transform 0.25s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .research-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    transparent 30%,
+                    rgba(14, 50, 44, 0.75)
+                );
+        }
+
+        .research-card:nth-child(1) {
+            background:
+                url("https://images.unsplash.com/photo-1530053969600-caed2596d242?auto=format&fit=crop&w=900&q=85")
+                center / cover;
+        }
+
+        .research-card:nth-child(2) {
+            background:
+                url("https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=85")
+                center / cover;
+        }
+
+        .research-card:nth-child(3) {
+            background:
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85")
+                center / cover;
+        }
+
+        .research-card:nth-child(4) {
+            background:
+                url("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=85")
+                center / cover;
+        }
+
+        .research-card-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .research-card h3 {
+            font-size: 23px;
+            font-weight: normal;
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
+
+        .research-card a {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+        }
+
+
+        /* =========================
+           FEATURED PROJECT
+        ========================= */
+
+        .featured {
+            padding: 110px 0;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .featured-image {
+            min-height: 520px;
+
+            background:
+                url("https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?auto=format&fit=crop&w=1300&q=85")
+                center / cover;
+        }
+
+        .featured-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .featured-content p {
+            font-size: 17px;
+            color: #52635b;
+            margin-bottom: 20px;
+        }
+
+        .project-tag {
+            display: inline-block;
+
+            padding: 7px 12px;
+            margin-bottom: 20px;
+
+            background: #e8ebe1;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+
+        /* =========================
+           FIELD NOTES
+        ========================= */
+
+        .field-notes {
+            padding: 105px 0;
+
+            background: #18352f;
+            color: white;
+        }
+
+        .field-notes .section-label {
+            color: #b7c9b2;
+        }
+
+        .field-notes .section-heading p {
+            color: #d5ddd6;
+        }
+
+        .notes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .note-card {
+            background: #f7f5ee;
+            color: #18352f;
+        }
+
+        .note-image {
+            height: 220px;
+
+            background:
+                url("https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=900&q=85")
+                center / cover;
+        }
+
+        .note-card:nth-child(2) .note-image {
+            background-image:
+                url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=900&q=85");
+        }
+
+        .note-card:nth-child(3) .note-image {
+            background-image:
+                url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85");
+        }
+
+        .note-content {
+            padding: 23px;
+        }
+
+        .note-date {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #789477;
+        }
+
+        .note-content h3 {
+            font-size: 23px;
+            font-weight: normal;
+            line-height: 1.2;
+            margin: 10px 0;
+        }
+
+        .note-content p {
+            font-size: 14px;
+            color: #5b6862;
+        }
+
+        .note-link {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+        }
+
+
+        /* =========================
+           CV CALLOUT
+        ========================= */
+
+        .cv-section {
+            padding: 100px 0;
+        }
+
+        .cv-box {
+            border: 1px solid #cbd3c8;
+
+            padding: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 40px;
+        }
+
+        .cv-box h2 {
+            margin-bottom: 12px;
+        }
+
+        .cv-box p {
+            color: #596861;
+            max-width: 650px;
+        }
+
+        .dark-button {
+            background: #476b58;
+            color: white;
+            border-color: #476b58;
+
+            white-space: nowrap;
+        }
+
+        .dark-button:hover {
+            background: #18352f;
+            color: white;
+            border-color: #18352f;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid #d9ddd3;
+
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 25px;
+        }
+
+        .footer-tagline {
+            font-size: 25px;
+            font-style: italic;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+        }
+
+        .copyright {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            color: #748078;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .intro-grid,
+            .featured-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .research-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .notes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cv-box {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 35px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+        }
+
+        @media (max-width: 550px) {
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .research-card {
+                min-height: 280px;
+            }
+
+            .photo-placeholder,
+            .featured-image {
+                min-height: 350px;
+            }
+
+            h2 {
+                font-size: 40px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <header>
+        <div class="container">
+            <nav>
+
+                <a href="#home" class="logo">
+                    <span class="logo-mark">⌁</span>
+                    Taylor Breton
+                </a>
+
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#research">Research</a>
+                    <a href="#publications">Publications</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#field-notes">Field Notes</a>
+                    <a href="#cv">CV</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    Coastal Ecology · Restoration · Science
+                </div>
+
+                <h1>Taylor Breton</h1>
+
+                <div class="hero-subtitle">
+                    PhD Student | Coastal Ecology & Restoration
+                </div>
+
+                <div class="hero-location">
+                    University of Florida
+                </div>
+
+                <div class="hero-line"></div>
+
+                <p class="hero-description">
+                    I study how seagrass ecosystems respond to environmental change
+                    and how we can restore them for healthier, more resilient coasts.
+                </p>
+
+                <a href="#about" class="button">
+                    Explore my work ↓
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================= -->
+
+        <section class="intro" id="about">
+
+            <div class="container">
+
+                <div class="intro-grid">
+
+                    <div>
+
+                        <div class="section-label">
+                            About me
+                        </div>
+
+                        <h2>
+                            Science for healthier coasts.
+                        </h2>
+
+                        <p>
+                            I'm a PhD student studying seagrass ecology, restoration,
+                            and the environmental factors that shape successful
+                            coastal restoration.
+                        </p>
+
+                        <p>
+                            My work sits at the intersection of field ecology,
+                            experimentation, propagation, and applied restoration.
+                            I'm particularly interested in understanding how
+                            biological variation and environmental conditions
+                            influence restoration outcomes.
+                        </p>
+
+                        <a href="#research" class="text-link">
+                            Learn about my research →
+                        </a>
+
+                    </div>
+
+
+                    <div class="photo-placeholder">
+
+                        <div class="photo-caption">
+                            Coastal fieldwork
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             RESEARCH
+        ========================= -->
+
+        <section class="research" id="research">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Research
+                    </div>
+
+                    <h2>
+                        Questions beneath the surface.
+                    </h2>
+
+                    <p>
+                        My research explores how seagrass ecosystems respond to
+                        environmental change and how we can restore them effectively.
+                    </p>
+
+                </div>
+
+
+                <div class="research-grid">
+
+                    <div class="research-card">
+
+                        <div class="research-card-content">
+
+                            <h3>
+                                Seagrass Propagation & Restoration
+                            </h3>
+
+                            <a href="#projects">
+                                Explore →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-card">
+
+                        <div class="research-card-content">
+
+                            <h3>
+                                Genotypic Variation & Plant Performance
+                            </h3>
+
+                            <a href="#projects">
+                                Explore →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-card">
+
+                        <div class="research-card-content">
+
+                            <h3>
+                                Environmental Stressors
+                            </h3>
+
+                            <a href="#projects">
+                                Explore →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="research-card">
+
+                        <div class="research-card-content">
+
+                            <h3>
+                                Applied Management & Conservation
+                            </h3>
+
+                            <a href="#projects">
+                                Explore →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURED PROJECT
+        ========================= -->
+
+        <section class="featured" id="projects">
+
+            <div class="container">
+
+                <div class="featured-grid">
+
+                    <div class="featured-image"></div>
+
+
+                    <div class="featured-content">
+
+                        <div class="section-label">
+                            Featured project
+                        </div>
+
+                        <span class="project-tag">
+                            Vallisneria americana
+                        </span>
+
+                        <h2>
+                            Growing better seagrass for restoration.
+                        </h2>
+
+                        <p>
+                            My research investigates how genotype, sediment,
+                            fertilizer, aeration, and planting conditions influence
+                            the propagation and establishment of
+                            <em>Vallisneria americana</em>.
+                        </p>
+
+                        <p>
+                            The goal is to turn ecological knowledge into practical
+                            guidance for restoration practitioners.
+                        </p>
+
+                        <a href="#field-notes" class="text-link">
+                            Read about the work →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FIELD NOTES
+        ========================= -->
+
+        <section class="field-notes" id="field-notes">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Field Notes
+                    </div>
+
+                    <h2>
+                        From the field, the lab, and everything in between.
+                    </h2>
+
+                    <p>
+                        A place for research stories, field days, conference notes,
+                        PhD life, and the occasional behind-the-scenes update.
+                    </p>
+
+                </div>
+
+
+                <div class="notes-grid">
+
+                    <article class="note-card">
+
+                        <div class="note-image"></div>
+
+                        <div class="note-content">
+
+                            <div class="note-date">
+                                Coming soon
+                            </div>
+
+                            <h3>
+                                Starting a PhD in Florida
+                            </h3>
+
+                            <p>
+                                First impressions, new research questions,
+                                and what I'm looking forward to.
+                            </p>
+
+                            <a href="#" class="note-link">
+                                Read more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="note-card">
+
+                        <div class="note-image"></div>
+
+                        <div class="note-content">
+
+                            <div class="note-date">
+                                Coming soon
+                            </div>
+
+                            <h3>
+                                The reality of growing seagrass
+                            </h3>
+
+                            <p>
+                                What actually happens when your greenhouse
+                                experiment refuses to cooperate.
+                            </p>
+
+                            <a href="#" class="note-link">
+                                Read more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="note-card">
+
+                        <div class="note-image"></div>
+
+                        <div class="note-content">
+
+                            <div class="note-date">
+                                Coming soon
+                            </div>
+
+                            <h3>
+                                A field day on the Hudson
+                            </h3>
+
+                            <p>
+                                Long days, muddy boots, and what fieldwork
+                                teaches you that a spreadsheet can't.
+                            </p>
+
+                            <a href="#" class="note-link">
+                                Read more →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CV
+        ========================= -->
+
+        <section class="cv-section" id="cv">
+
+            <div class="container">
+
+                <div class="cv-box">
+
+                    <div>
+
+                        <div class="section-label">
+                            Curriculum Vitae
+                        </div>
+
+                        <h2>
+                            My academic journey.
+                        </h2>
+
+                        <p>
+                            Explore my education, research experience, publications,
+                            presentations, awards, teaching, outreach, and
+                            professional experience.
+                        </p>
+
+                    </div>
+
+                    <a href="#" class="button dark-button">
+                        Download CV
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer id="contact">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div class="footer-tagline">
+                    Restoring today for tomorrow's coasts.
+                </div>
+
+                <div class="footer-links">
+
+                    <a href="#">
+                        Email
+                    </a>
+
+                    <a href="#">
+                        Google Scholar
+                    </a>
+
+                    <a href="#">
+                        LinkedIn
+                    </a>
+
+                    <a href="#">
+                        GitHub
+                    </a>
+
+                </div>
+
+                <div class="copyright">
+                    © 2026 Taylor Breton
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
